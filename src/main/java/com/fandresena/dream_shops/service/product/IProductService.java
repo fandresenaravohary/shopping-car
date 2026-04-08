@@ -2,6 +2,7 @@ package com.fandresena.dream_shops.service.product;
 
 import com.fandresena.dream_shops.models.Product;
 import com.fandresena.dream_shops.request.AddProductRequest;
+import com.fandresena.dream_shops.request.UpdateProductRequest;
 
 import java.util.List;
 
@@ -9,7 +10,7 @@ public interface IProductService {
     Product addProduct(AddProductRequest product);
     Product getProductById(Long id);
     void deleteProductById(Long id);
-    void updateProductById(Long id);
+    Product updateProduct(UpdateProductRequest product, Long id);
     List<Product> getAllProducts();
     List<Product> getProductsByCategory(String category);
     List<Product> getProductsByBrand(String brand);
